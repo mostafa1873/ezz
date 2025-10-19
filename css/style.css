@@ -1,0 +1,1031 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    transition: 0.4s ease;
+    z-index: 1000;
+}
+
+nav.scrolled {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    position: relative;
+    z-index: 1001;
+}
+
+.logo img {
+    height: 65px;
+    transition: 0.3s;
+}
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+nav.scrolled .nav-links a {
+    color: #0b4228;
+}
+
+.nav-links a:hover {
+    color: #35e41a;
+    padding-bottom: 10px;
+}
+
+/* LANGUAGE DROPDOWN */
+
+.lang-dropdown {
+    position: relative;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav.scrolled .lang-btn {
+    background: #0b4228;
+    color: white;
+}
+
+.lang-menu {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.lang-menu.active {
+    display: flex;
+}
+
+.lang-menu button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    text-align: left;
+    cursor: pointer;
+    color: #0b4228;
+}
+
+.lang-menu button:hover {
+    background: #a8e6cf;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+nav.scrolled .menu-icon div {
+    background: #0b4228;
+}
+
+.menu-icon.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.menu-icon.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* SIDE MENU (MOBILE) */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    right: auto;
+    width: 260px;
+    height: 100%;
+    background: #fff;
+    color: #062d1b;
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+    gap: 20px;
+    align-items: center;
+    transition: 0.4s ease;
+    z-index: 1000;
+}
+
+.side-menu.active {
+    left: 0;
+    right: auto;
+}
+
+.side-menu a {
+    color: #062d1b;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 10px 0;
+}
+
+.side-menu a:hover {
+    color: #35e41a;
+}
+
+.side-menu .lang-btn {
+    background: #0b4228;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.side-menu .lang-dropdown {
+    width: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.side-menu .lang-menu {
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: none;
+}
+
+.side-menu .side-logo img {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+/* DROWP DONE */
+
+.dropdown-link {
+    position: relative;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s;
+}
+
+nav.scrolled .dropdown-btn {
+    color: #0b2616;
+}
+
+.dropdown-btn:hover {
+    color: #35e41a;
+}
+
+.dropdown-btn i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.dropdown-menu a {
+    color: #0b4228;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+/* === SIDEBAR DROPDOWN === */
+.dropdown-link-side {
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-btn-side {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: 0.3s;
+}
+
+.dropdown-btn-side i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-btn-side.active i {
+    transform: rotate(180deg);
+}
+
+/* Sidebar dropdown animation */
+
+.dropdown-menu-side {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.dropdown-menu-side.active {
+    max-height: 120px;
+    opacity: 1;
+}
+
+
+.dropdown-menu-side a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 0;
+    transition: 0.3s;
+}
+
+.dropdown-menu-side a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* DROWP DOWN */
+
+
+
+/* PRELOADER */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner {
+    border: none;
+    width: 120px;
+    height: 120px;
+    animation: logoPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+}
+
+/* PRELOADER */
+
+
+/* HERO SECTION */
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: brightness(0.6); */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.4));
+
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.hero button {
+    background: #062d1b;
+    color: #fff;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1.2s all 0.4s;
+}
+
+.hero button:hover {
+    background: #081c10;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HERO */
+
+
+/* BANNER */
+
+.category-banners {
+    display: flex;
+    gap: 20px;
+    padding: 80px 10%;
+    background-color: #f8f8f8;
+}
+
+.banner-item {
+    position: relative;
+    flex: 1;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.banner-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.vegetables-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4)), url('../images/main-vegetables.jpg');
+}
+
+.fruits-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4)), url('../images/main-frutis.jfif');
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 80%;
+}
+
+.banner-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.banner-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: #fefefe;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0b4228;
+    border: 1px solid #0b4228;
+    color: #ffffff;
+}
+
+/* BANNER */
+
+
+
+/* MISSION SECTION */
+
+.mission {
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background: #ffffff;
+}
+
+.mission img {
+    width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.8s ease;
+}
+
+.mission-content {
+    width: 50%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.8s ease 0.5s;
+}
+
+.mission-separator {
+    border: none;
+    height: 1px;
+    width: 60%;
+    background-color: #081c10;
+    margin: 25px auto;
+}
+
+.mission.visible img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mission.visible .mission-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* JOURNEY */
+
+.export-journey {
+    color: #062d1b;
+    background-color: #fff;
+    text-align: center;
+    padding: 100px 10%;
+}
+
+.export-journey h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.journey-subtitle {
+    font-size: 1.1rem;
+    color: #081c10;
+    margin-bottom: 60px;
+}
+
+/* Gallery Grid */
+
+.journey-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.journey-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.journey-item.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.journey-gallery .journey-item:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.journey-gallery .journey-item:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.journey-gallery .journey-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.journey-gallery .journey-item:nth-child(4) {
+    transition-delay: 0.45s;
+}
+
+.journey-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.journey-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.5);
+}
+
+.journey-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 66, 40, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.journey-item:hover .journey-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.journey-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #a8e6cf;
+}
+
+.journey-overlay p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+/* END JOUNRY */
+
+
+
+/* WhatsApp Floating Button */
+
+.whatsapp-wrapper {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+}
+
+.whatsapp-float {
+  background-color: #25D366;
+  color: #fff;
+  font-size: 22px;
+  padding: 16px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; 
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-5px) scale(1.05);
+  background-color: #1ebd5a;
+}
+
+@keyframes floatPulse {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.whatsapp-float {
+  animation: floatPulse 3s infinite ease-in-out;
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  bottom: 65px;
+  right: 0;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.whatsapp-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+.whatsapp-wrapper.show-tooltip .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* WhatsApp Floating Button */
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+    background: #081c10;
+    color: #d9e9dd;
+    padding: 60px 10% 30px;
+    font-family: "Poppins", sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+/* --- Brand --- */
+
+.footer-brand {
+    max-width: 280px;
+}
+
+.footer-logo {
+    width: 110px;
+    margin-bottom: 15px;
+    filter: brightness(1.1);
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #a7b6ac;
+}
+
+/* --- Sections --- */
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+    color: #b8c8bc;
+    font-size: 0.95rem;
+}
+
+.footer-section a {
+    color: #b8c8bc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #78c091;
+}
+
+/* --- Social Icons --- */
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 36px;
+    height: 36px;
+    background: #143d24;
+    color: #cde8d4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #78c091;
+    color: #0b2616;
+    transform: translateY(-3px);
+}
+
+/* --- Bottom --- */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 40px;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #96a89d;
+}
+
+.footer-bottom a {
+    text-decoration: none !important;
+    color: #FFF;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline !important;
+    color: #4CAF50;
+}
+
+
+/* RESPONSIVE CONTENT */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    .mission {
+        flex-direction: column;
+    }
+
+    .mission img,
+    .mission-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    .mission {
+        flex-direction: column;
+        padding: 50px 5%;
+    }
+
+    .mission img,
+    .mission-content {
+        width: 100%;
+    }
+
+    .mission img {
+        transition: all 1.2s ease;
+    }
+
+    .mission-content {
+        transition: all 1.2s ease 0.3s;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+
+    .category-banners {
+        flex-direction: column;
+        padding: 50px 5%;
+    }
+
+    .banner-item {
+        height: 280px;
+    }
+
+    .banner-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .banner-content p {
+        font-size: 0.95rem;
+    }
+
+    .export-journey {
+        padding: 70px 6%;
+    }
+
+    .journey-item img {
+        height: 220px;
+    }
+
+    .journey-overlay h3 {
+        font-size: 1.2rem;
+    }
+
+    .journey-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 50px 6% 25px;
+    }
+
+    .footer-logo {
+        width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* RESPONSIVE NAV & CONTENT */

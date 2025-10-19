@@ -170,35 +170,39 @@ document.addEventListener('DOMContentLoaded', () => {
 setTimeout(() => document.querySelector('.whatsapp-wrapper')?.classList.add('show-tooltip'), 2000);
 setTimeout(() => document.querySelector('.whatsapp-wrapper')?.classList.remove('show-tooltip'), 7000);
 
-//  MULTI-LANGUAGE SYSTEM 
+// ==================== //
+//  BASE PATH DETECTOR  //
+// ==================== //
+function getBasePath() {
+    const path = window.location.pathname;
+    if (path.includes('/pages/')) return '../';
+    if (path.includes('/work/')) return '/work/';
+    return './';
+}
+
+// ==================== //
+//  MULTI-LANGUAGE SYS  //
+// ==================== //
 const supportedLangs = ["EN", "AR", "IT"];
 let currentLang = localStorage.getItem("lang") || "EN";
 
-// 🔥 تحديد المسارات الديناميكية
-function getBasePath() {
-    return window.location.pathname.includes("/pages/")
-        ? "../"
-        : "./";
-}
-
 async function loadLanguage(lang) {
     try {
-        const base = getBasePath();
-        const response = await fetch(`${base}lang/${lang.toLowerCase()}.json`);
+        const response = await fetch(`${getBasePath()}lang/${lang.toLowerCase()}.json`);
         const translations = await response.json();
         applyTranslations(translations);
 
         document.documentElement.dir = lang === "AR" ? "rtl" : "ltr";
         document.body.style.textAlign = lang === "AR" ? "right" : "left";
 
-        document.getElementById("langBtn").textContent = lang;
+        if (langBtn) langBtn.textContent = lang;
         const sideBtn = document.getElementById("langBtnSide");
         if (sideBtn) sideBtn.textContent = lang;
 
         localStorage.setItem("lang", lang);
         currentLang = lang;
 
-        langMenu.classList.remove("active");
+        langMenu?.classList.remove("active");
         langMenuSide?.classList.remove("active");
 
         refreshProductsLanguage();
@@ -231,8 +235,7 @@ async function loadProducts() {
     const filterButtons = document.querySelectorAll(".filter-btn");
     if (!productGrid) return;
 
-    const base = getBasePath();
-    const response = await fetch(`${base}products.json`);
+    const response = await fetch(`${getBasePath()}products.json`);
     const data = await response.json();
     const products = data.products;
 
@@ -244,13 +247,13 @@ async function loadProducts() {
             card.classList.add("product-card");
             card.setAttribute("data-category", product.category);
             card.innerHTML = `
-        <div class="product-img-box">
-            <img src="${product.image}" alt="${name}">
-        </div>
-        <h3 class="product-title">${name}</h3>
-      `;
+                <div class="product-img-box">
+                    <img src="${product.image}" alt="${name}">
+                </div>
+                <h3 class="product-title">${name}</h3>
+            `;
             card.addEventListener("click", () => {
-                window.location.href = `${base}pages/productdetails.html?id=${product.id}`;
+                window.location.href = `${getBasePath()}pages/productdetails.html?id=${product.id}`;
             });
             productGrid.appendChild(card);
         });
@@ -287,8 +290,7 @@ async function loadProductDetails() {
     const productId = parseInt(params.get("id"));
     if (!productId) return;
 
-    const base = getBasePath();
-    const response = await fetch(`${base}products.json`);
+    const response = await fetch(`${getBasePath()}products.json`);
     const data = await response.json();
     const products = data.products;
     const currentProduct = products.find(p => p.id === productId);
@@ -311,11 +313,11 @@ async function loadProductDetails() {
         card.classList.add("product-card");
         const name = p[`name_${currentLang.toLowerCase()}`] || p.name_en;
         card.innerHTML = `
-      <img src="${p.image}" alt="${name}">
-      <h3>${name}</h3>
-    `;
+            <img src="${p.image}" alt="${name}">
+            <h3>${name}</h3>
+        `;
         card.addEventListener("click", () => {
-            window.location.href = `${base}pages/productdetails.html?id=${p.id}`;
+            window.location.href = `${getBasePath()}pages/productdetails.html?id=${p.id}`;
         });
         bestGrid.appendChild(card);
     });

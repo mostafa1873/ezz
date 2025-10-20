@@ -175,7 +175,7 @@ const filterMap = {
     "في محلول ملحي": "in_brine",
 
     "tutti i prodotti": "all",
-    "fruit": "frutta",
+    "frutta": "fruit",
     "fresco": "fresh",
     "surgelati (iqf)": "iqf",
     "sottaceto": "pickled",

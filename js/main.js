@@ -137,7 +137,6 @@ function applyTranslations(translations) {
     });
 }
 
-// ✅ دالة جديدة لإعادة تطبيق الترجمة بعد تحميل محتوى جديد
 async function reapplyTranslations() {
     try {
         const response = await fetch(`${getBasePath()}lang/${currentLang.toLowerCase()}.json`);
@@ -162,18 +161,21 @@ document.addEventListener("DOMContentLoaded", () => {
 //  FILTER TRANSLATION MAP
 const filterMap = {
     "all products": "all",
+    "fruit": "fruit",
     "fresh": "fresh",
     "frozen": "iqf",
     "pickled": "pickled",
     "in brine": "in_brine",
 
     "جميع المنتجات": "all",
+    "فواكة": "fruit",
     "طازجة": "fresh",
     "مجمدة": "iqf",
     "مخلل": "pickled",
     "في محلول ملحي": "in_brine",
 
     "tutti i prodotti": "all",
+    "fruit": "frutta",
     "fresco": "fresh",
     "surgelati (iqf)": "iqf",
     "sottaceto": "pickled",

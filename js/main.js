@@ -1,11 +1,12 @@
-//  NAVBAR SCROLL EFFECT 
+//  NAVBAR SCROLL EFFECT
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 80) navbar.classList.add('scrolled');
     else navbar.classList.remove('scrolled');
 });
 
-//  LANGUAGE DROPDOWN 
+
+//  LANGUAGE DROPDOWN
 const langBtn = document.getElementById("langBtn");
 const langMenu = document.getElementById("langMenu");
 
@@ -22,7 +23,8 @@ if (langBtn && langMenu) {
     });
 }
 
-//  DROPDOWN (NAVBAR)
+
+//  NAVBAR DROPDOWN
 const dropdownLink = document.querySelector('.dropdown-link');
 if (dropdownLink) {
     const dropdownBtn = dropdownLink.querySelector('.dropdown-btn');
@@ -44,31 +46,10 @@ if (dropdownLink) {
     });
 }
 
-//  SIDE MENU 
-const productsDropdownSide = document.getElementById("productsDropdownSide");
-if (productsDropdownSide) {
-    const productsBtnSide = productsDropdownSide.querySelector('.dropdown-btn-side');
-    const productsMenuSide = productsDropdownSide.querySelector('.dropdown-menu-side');
 
-    productsBtnSide.addEventListener("click", (e) => {
-        e.stopPropagation();
-        productsMenuSide.classList.toggle("active");
-    });
-}
-
-const dropdownBtnSide = document.querySelector('.dropdown-btn-side');
-const dropdownMenuSide = document.querySelector('.dropdown-menu-side');
-
-if (dropdownBtnSide && dropdownMenuSide) {
-    dropdownBtnSide.addEventListener('click', () => {
-        dropdownMenuSide.classList.toggle('active');
-        dropdownBtnSide.classList.toggle('active');
-    });
-}
-
+//  SIDE MENU
 const menuIcon = document.getElementById("menuIcon");
 const sideMenu = document.getElementById("sideMenu");
-
 if (menuIcon && sideMenu) {
     menuIcon.addEventListener("click", () => {
         sideMenu.classList.toggle("active");
@@ -81,6 +62,8 @@ if (menuIcon && sideMenu) {
     });
 }
 
+
+//  LANGUAGE SIDE MENU
 const langBtnSide = document.getElementById("langBtnSide");
 const langMenuSide = document.getElementById("langMenuSide");
 
@@ -97,39 +80,8 @@ if (langBtnSide && langMenuSide) {
     });
 }
 
-//  SCROLL ANIMATIONS 
-document.addEventListener('DOMContentLoaded', () => {
-    const missionSection = document.getElementById('missionSection') || document.querySelector('.mission');
-    if (missionSection) {
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        observer.observe(missionSection);
-    }
-});
 
-//  JOURNEY ANIMATION 
-document.addEventListener('DOMContentLoaded', () => {
-    const journeyItems = document.querySelectorAll('.journey-item');
-    if (journeyItems.length > 0) {
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('reveal');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.2 });
-        journeyItems.forEach(item => observer.observe(item));
-    }
-});
-
-//  PRELOADER 
+//  PRELOADER
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
@@ -138,41 +90,8 @@ window.addEventListener('load', () => {
     }
 });
 
-//  ANIMATIONS
-document.addEventListener('DOMContentLoaded', () => {
-    const elementsToAnimate = document.querySelectorAll(
-        '.about-hero h1, .about-hero p, .about-company .about-text, .about-company .about-img, .mission-box, .why-us h2, .why-us .section-description, .why-us .reason-point, .global-reach-map h2, .global-reach-map p, .global-reach-map .map-container img, .global-reach-map .stats-bar'
-    );
 
-    const checkAnimation = () => {
-        elementsToAnimate.forEach(el => {
-            if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
-                el.classList.add('show-animation');
-            }
-        });
-    };
-
-    let boxIndex = 0;
-    elementsToAnimate.forEach(el => {
-        if (el.classList.contains('mission-box') || el.classList.contains('reason-point')) {
-            el.style.transitionDelay = `${boxIndex * 0.1}s`;
-            boxIndex = (boxIndex + 1) % 6;
-        } else if (el.closest('.about-hero') && (el.tagName === 'H1' || el.tagName === 'P')) {
-            el.style.transitionDelay = '0.5s';
-        }
-    });
-
-    window.addEventListener('scroll', checkAnimation);
-    checkAnimation();
-});
-
-//  WHATSAPP TOOLTIP 
-setTimeout(() => document.querySelector('.whatsapp-wrapper')?.classList.add('show-tooltip'), 2000);
-setTimeout(() => document.querySelector('.whatsapp-wrapper')?.classList.remove('show-tooltip'), 7000);
-
-// ==================== //
-//  BASE PATH DETECTOR  //
-// ==================== //
+//  BASE PATH DETECTOR
 function getBasePath() {
     const path = window.location.pathname;
     if (path.includes('/pages/')) return '../';
@@ -180,9 +99,8 @@ function getBasePath() {
     return './';
 }
 
-// ==================== //
-//  MULTI-LANGUAGE SYS  //
-// ==================== //
+
+//  MULTI LANGUAGE SYSTEM
 const supportedLangs = ["EN", "AR", "IT"];
 let currentLang = localStorage.getItem("lang") || "EN";
 
@@ -219,6 +137,17 @@ function applyTranslations(translations) {
     });
 }
 
+// ✅ دالة جديدة لإعادة تطبيق الترجمة بعد تحميل محتوى جديد
+async function reapplyTranslations() {
+    try {
+        const response = await fetch(`${getBasePath()}lang/${currentLang.toLowerCase()}.json`);
+        const translations = await response.json();
+        applyTranslations(translations);
+    } catch (error) {
+        console.error("Error reapplying translations:", error);
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     loadLanguage(currentLang);
     document.querySelectorAll("#langMenu button, #langMenuSide button").forEach(btn => {
@@ -229,7 +158,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-//  PRODUCTS
+
+//  FILTER TRANSLATION MAP
+const filterMap = {
+    "all products": "all",
+    "fresh": "fresh",
+    "frozen": "iqf",
+    "pickled": "pickled",
+    "in brine": "in_brine",
+
+    "جميع المنتجات": "all",
+    "طازجة": "fresh",
+    "مجمدة": "iqf",
+    "مخلل": "pickled",
+    "في محلول ملحي": "in_brine",
+
+    "tutti i prodotti": "all",
+    "fresco": "fresh",
+    "surgelati (iqf)": "iqf",
+    "sottaceto": "pickled",
+    "in salamoia": "in_brine"
+};
+
+
+//  PRODUCTS SECTION
 async function loadProducts() {
     const productGrid = document.querySelector(".product-grid");
     const filterButtons = document.querySelectorAll(".filter-btn");
@@ -260,22 +212,28 @@ async function loadProducts() {
     }
 
     displayProducts(products);
+    await reapplyTranslations();
 
     filterButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", async () => {
             filterButtons.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
-            const filter = btn.textContent.trim().toLowerCase();
-            if (["all products", "كل المنتجات", "tutti i prodotti"].includes(filter)) {
+
+            const filterText = btn.textContent.trim().toLowerCase();
+            const normalizedFilter = filterMap[filterText] || filterText;
+
+            if (normalizedFilter === "all") {
                 displayProducts(products);
             } else {
-                const filtered = products.filter(p =>
-                    Array.isArray(p.status)
-                        ? p.status.includes(filter.replace(" ", "_"))
-                        : p.status === filter.replace(" ", "_") || p.category === filter
-                );
+                const filtered = products.filter(p => {
+                    const statuses = Array.isArray(p.status)
+                        ? p.status.map(s => s.toLowerCase())
+                        : [p.status?.toLowerCase()];
+                    return statuses.includes(normalizedFilter) || p.category?.toLowerCase() === normalizedFilter;
+                });
                 displayProducts(filtered);
             }
+            await reapplyTranslations();
         });
     });
 }
@@ -284,7 +242,8 @@ function refreshProductsLanguage() {
     if (document.querySelector(".product-grid")) loadProducts();
 }
 
-//  PRODUCT DETAILS 
+
+//  PRODUCT DETAILS PAGE
 async function loadProductDetails() {
     const params = new URLSearchParams(window.location.search);
     const productId = parseInt(params.get("id"));
@@ -303,31 +262,124 @@ async function loadProductDetails() {
     document.querySelector(".product-info h2").textContent = name;
     document.querySelector(".product-desc").textContent = desc;
 
-    const bestGrid = document.querySelector(".best-sellers .product-grid");
-    if (!bestGrid) return;
+    //  Variants Section (Available Types) 
+    const variantSection = document.querySelector(".variant-grid");
+    if (variantSection) {
+        variantSection.innerHTML = "";
+        if (currentProduct.variants && currentProduct.variants.length > 0) {
+            currentProduct.variants.forEach(v => {
+                const vName = v[`name_${currentLang.toLowerCase()}`] || v.name_en;
+                const div = document.createElement("div");
+                div.classList.add("variant-item");
+                div.innerHTML = `<h4>${vName}</h4>`;
+                variantSection.appendChild(div);
+            });
+        }
+    }
 
-    const bestSellers = products.filter(p => p.id !== currentProduct.id).slice(0, 4);
-    bestGrid.innerHTML = "";
-    bestSellers.forEach(p => {
-        const card = document.createElement("div");
-        card.classList.add("product-card");
-        const name = p[`name_${currentLang.toLowerCase()}`] || p.name_en;
-        card.innerHTML = `
-            <img src="${p.image}" alt="${name}">
-            <h3>${name}</h3>
-        `;
-        card.addEventListener("click", () => {
-            window.location.href = `${getBasePath()}pages/productdetails.html?id=${p.id}`;
+    //  Best Sellers 
+
+    const bestGrid = document.querySelector(".best-sellers .product-grid");
+    if (bestGrid) {
+        const bestSellers = products.filter(p => p.id !== currentProduct.id).slice(0, 4);
+        bestGrid.innerHTML = "";
+        bestSellers.forEach(p => {
+            const card = document.createElement("div");
+            card.classList.add("product-card");
+            const name = p[`name_${currentLang.toLowerCase()}`] || p.name_en;
+            card.innerHTML = `
+                <img src="${p.image}" alt="${name}">
+                <h3>${name}</h3>
+            `;
+            card.addEventListener("click", () => {
+                window.location.href = `${getBasePath()}pages/productdetails.html?id=${p.id}`;
+            });
+            bestGrid.appendChild(card);
         });
-        bestGrid.appendChild(card);
-    });
+    }
+
+    await reapplyTranslations();
 }
 
 function refreshProductDetailsLanguage() {
     if (document.querySelector(".product-details")) loadProductDetails();
 }
 
+
+//  INIT
 document.addEventListener("DOMContentLoaded", () => {
     loadProducts();
     loadProductDetails();
 });
+
+// SCROLL ANIMATIONS
+
+document.addEventListener('DOMContentLoaded', () => {
+    const missionSection = document.getElementById('missionSection') || document.querySelector('.mission');
+    if (missionSection) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(missionSection);
+    }
+});
+
+// JOURNEY ANIMATION
+
+document.addEventListener('DOMContentLoaded', () => {
+    const journeyItems = document.querySelectorAll('.journey-item');
+    if (journeyItems.length > 0) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        journeyItems.forEach(item => observer.observe(item));
+    }
+});
+
+
+// ANIMATIONS (main show-animation logic)
+
+document.addEventListener('DOMContentLoaded', () => {
+    const elementsToAnimate = document.querySelectorAll(
+        '.about-hero h1, .about-hero p, .about-company .about-text, .about-company .about-img, .mission-box, .why-us h2, .why-us .section-description, .why-us .reason-point, .global-reach-map h2, .global-reach-map p, .global-reach-map .map-container img, .global-reach-map .stats-bar'
+    );
+
+    const checkAnimation = () => {
+        elementsToAnimate.forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                el.classList.add('show-animation');
+            }
+        });
+    };
+
+    let boxIndex = 0;
+    elementsToAnimate.forEach(el => {
+        if (el.classList.contains('mission-box') || el.classList.contains('reason-point')) {
+            el.style.transitionDelay = `${boxIndex * 0.1}s`;
+            boxIndex = (boxIndex + 1) % 6;
+        } else if (el.closest('.about-hero') && (el.tagName === 'H1' || el.tagName === 'P')) {
+            el.style.transitionDelay = '0.5s';
+        }
+    });
+
+    window.addEventListener('scroll', checkAnimation);
+    // run once to reveal items already in viewport
+    checkAnimation();
+});
+
+// WHATSAPP TOOLTIP
+setTimeout(() => document.querySelector('.whatsapp-wrapper')?.classList.add('show-tooltip'), 2000);
+setTimeout(() => document.querySelector('.whatsapp-wrapper')?.classList.remove('show-tooltip'), 7000);
+

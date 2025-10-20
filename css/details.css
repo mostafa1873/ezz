@@ -46,7 +46,7 @@ body {
 
 .product-image img {
     width: 100%;
-    max-width: 550px; 
+    max-width: 550px;
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     background-color: #fff;
@@ -89,10 +89,56 @@ body {
     font-size: 1rem;
     cursor: pointer;
     transition: 0.3s ease;
+    margin-top: 25px;
 }
 
 .contact-btn:hover {
     background: #0b4228;
+}
+
+/*  AVAILABLE TYPES  */
+
+.product-info h2:nth-of-type(2) {
+    margin-top: 35px;
+    font-size: 2rem;
+    color: #136d41;
+    position: relative;
+}
+
+.product-info h2:nth-of-type(2)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 60px;
+    height: 3px;
+    background-color: #136d41;
+    border-radius: 2px;
+}
+
+.variant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.variant-item {
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.variant-item:hover {
+    background: #136d41;
+    color: #fff;
+    transform: translateY(-3px);
 }
 
 /*  BEST SELLERS  */

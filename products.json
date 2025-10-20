@@ -15,10 +15,7 @@
     {
       "id": 2,
       "category": "vegetable",
-      "status": [
-        "iqf",
-        "in_brine"
-      ],
+      "status": "iqf",
       "name_ar": "خرشوف مجمد",
       "name_en": "Artichoke IQF",
       "name_it": "Carciofo IQF",
@@ -57,10 +54,7 @@
     {
       "id": 3,
       "category": "vegetable",
-      "status": [
-        "iqf",
-        "in_brine"
-      ],
+      "status": "in_brine",
       "name_ar": "خرشوف محلول ملحي",
       "name_en": "Artichoke In Brine",
       "name_it": "Salamoia di carciofi",
@@ -98,66 +92,6 @@
         "iqf",
         "in_brine"
       ],
-      "name_ar": " الخرشوف الساق",
-      "name_en": "Artichoke Stem",
-      "name_it": "gambo di carciofo",
-      "image": "../image/product4.png",
-      "description_ar": "لخرشوف المصري المُجمد بتقنية التجميد السريع (IQF) مع الساق مثالي لإضافته إلى الحساء والصلصات وأطباق المعكرونة وغيرها، مما يُسهّل دمج هذه الخضار متعددة الاستخدامات في إبداعاتك الطهوية. متوفر بأحجام متنوعة (١٤/١٦ قطعة/كجم)",
-      "description_en": "IQF frozen Egyptian Artichoke with Stem are perfect for adding to soups, sauces, pasta dishes, and more, making it easy to incorporate this versatile vegetable into your culinary creations. They come in a variety of sizes Available in (14/16 pieces/kg).",
-      "description_it": "I cuori di carciofo egiziani surgelati IQFsono perfetti per essere aggiunti a zuppe, salse, primi piatti e altro ancora, rendendo facile incorporare questo versatile ortaggio nelle vostre creazioni culinarie. Sono disponibili in diverse dimensioni: (20-25 cm), (25-35 cm), fino a 35 cm."
-    },
-    {
-      "id": 5,
-      "category": "vegetable",
-      "status": [
-        "iqf",
-        "in_brine"
-      ],
-      "name_ar": "شرائح الخرشوف",
-      "name_en": "Artichoke Slice",
-      "name_it": "Fetta Di Carciofo",
-      "image": "../image/product5.png",
-      "description_ar": "شرائح الخرشوف المصري المجمدة بتقنية التجميد السريع (IQF) مثالية لإضافتها إلى الحساء والصلصات وأطباق المعكرونة وغيرها، مما يُسهّل دمج هذه الخضار متعددة الاستخدامات في إبداعاتك الطهوية. تتوفر بأحجام متنوعة، وهي طرية ولذيذة للبيتزا والسلطات (قطرها ٢ مم).",
-      "description_en": "IQF frozen Egyptian Artichoke Slice are perfect for adding to soups, sauces, pasta dishes, and more, making it easy to incorporate this versatile vegetable into your culinary creations. They come in a variety of sizes Tender and tasty for pizzas and salads (2 mm diameter).",
-      "description_it": "Le fette di carciofo egiziano surgelate IQFsono perfette per essere aggiunte a zuppe, salse, primi piatti e altro ancora, rendendo facile incorporare questo versatile ortaggio nelle vostre creazioni culinarie. Disponibili in diverse dimensioni. Teneri e gustosi per pizze e insalate (diametro 2 mm)."
-    },
-    {
-      "id": 6,
-      "category": "vegetable",
-      "status": [
-        "iqf",
-        "in_brine"
-      ],
-      "name_ar": "انصاف الخرشوف",
-      "name_en": "Artichoke Half",
-      "name_it": "Metà Di Carciofo",
-      "image": "../image/product6.png",
-      "description_ar": "أنصاف الخرشوف المصري المجمدة بتقنية التجميد السريع (IQF) مثالية لإضافتها إلى الحساء والصلصات وأطباق المعكرونة وغيرها، مما يُسهّل دمج هذه الخضار متعددة الاستخدامات في إبداعاتك الطهوية. تتوفر بأحجام متنوعة (40/50 نصفًا/كجم).",
-      "description_en": "IQF frozen Egyptian Artichoke Half are perfect for adding to soups, sauces, pasta dishes, and more, making it easy to incorporate this versatile vegetable into your culinary creations. They come in a variety of sizes (40/50 halves/kg).",
-      "description_it": "I carciofi egiziani surgelati IQFsono perfetti da aggiungere a zuppe, salse, primi piatti e altro ancora, rendendo facile incorporare questo versatile ortaggio nelle vostre creazioni culinarie. Sono disponibili in diverse dimensioni (40/50 metà/kg)."
-    },
-    {
-      "id": 7,
-      "category": "vegetable",
-      "status": [
-        "iqf",
-        "in_brine"
-      ],
-      "name_ar": "مكعبات الخرشوف",
-      "name_en": "Artichoke Cubes",
-      "name_it": "Cubetti di carciofo",
-      "image": "../image/product7.png",
-      "description_ar": "مكعبات الخرشوف المصري المجمدة بتقنية التجميد السريع (IQF) مثالية لإضافتها إلى الحساء والصلصات وأطباق المعكرونة وغيرها، مما يُسهّل دمج هذه الخضار متعددة الاستخدامات في إبداعاتك الطهوية. تتوفر بأحجام متنوعة: حجمان (10×10 مم) و(20×20 مم).",
-      "description_en": "Artichoke Cubes are perfect for adding to soups, sauces, pasta dishes, and more, making it easy to incorporate this versatile vegetable into your culinary creations. They come in a variety of sizes Available in 2 sizes (10x10 mm) and (20x20 mm).",
-      "description_it": "I cubetti di carciofo egiziano surgelati IQF sono perfetti per essere aggiunti a zuppe, salse, primi piatti e altro ancora, rendendo facile incorporare questo versatile ortaggio nelle vostre creazioni culinarie. Sono disponibili in diverse dimensioni. Disponibili in 2 formati (10x10 mm) e (20x20 mm)."
-    },
-    {
-      "id": 8,
-      "category": "vegetable",
-      "status": [
-        "iqf",
-        "in_brine"
-      ],
       "name_ar": "بروكلي مجمد",
       "name_en": "IQF Broccoli",
       "name_it": "Broccoli IQF",
@@ -167,7 +101,7 @@
       "description_it": "I broccoli surgelati di alta qualità, provenienti dalla fertile regione egiziana del Delta del Nilo, offrono freschezza e proprietà nutrizionali senza pari. Mantengono il loro colore vivace e il sapore intenso, rendendoli facili da aggiungere a qualsiasi piatto. Sono disponibili nelle seguenti varietà:(40-20 mm), (60-40 mm)."
     },
     {
-      "id": 9,
+      "id": 5,
       "category": "vegetable",
       "status": [
         "iqf",
@@ -182,7 +116,7 @@
       "description_it": "Godetevi il sapore fresco e i benefici per la salute del cavolfiore di prima qualità proveniente dal Delta del Nilo in Egitto. La nostra varietà surgelata ne conserva la naturale dolcezza e la consistenza morbida, rendendolo facile da utilizzare in una varietà di piatti.I nostri prodotti sono disponibili nelle seguenti varietà: Cavolfiore IQF (40-20 mm)."
     },
     {
-      "id": 10,
+      "id": 6,
       "category": "vegetable",
       "status": "iqf",
       "name_ar": "بامية مجمدة",
@@ -194,7 +128,7 @@
       "description_it": "L'okra surgelato mantiene la sua consistenza tenera e il suo sapore dolce, rendendolo un ingrediente versatile per vari usi mediorientali. I nostri prodotti sono disponibili nelle seguenti varietà: Extra Fine: fino a 2,5 cm di diametro Zero: Diametro: tra 2,5 e 3,5 cm Excellent: Diametro tra 3,5 e 4,5 cm Lady's Finger: Diametro tra 4,5 e 5,5 cm Okra Turca: tutte le dimensioni (0-4,5 cm), (7-4,5 cm) e (7-9 cm)."
     },
     {
-      "id": 11,
+      "id": 7,
       "category": "vegetable",
       "status": "iqf",
       "name_ar": "الفاصوليا المجمدة",
@@ -206,7 +140,7 @@
       "description_it": "Questi teneri fagioli vengono selezionati al culmine della maturazione, conservando i nutrienti essenziali e il sapore fresco. I nostri prodotti sono disponibili nelle seguenti varietà: Fagiolini interi IQF (diametro: 8-12 cm) Fagiolini tagliati IQF (diametro: 20-40 mm)"
     },
     {
-      "id": 12,
+      "id": 8,
       "category": "vegetable",
       "status": "iqf",
       "name_ar": "بازلاء خضراء مجمدة",
@@ -218,7 +152,7 @@
       "description_it": "Questi legumi versatili sono un elemento essenziale in cucina e la nostra varietà surgelata aggiunge autentici sapori mediorientali ai tuoi piatti tutto l'anno. I nostri prodotti sono disponibili nelle seguenti varietà: Piselli verdi semplici Piselli con carote Verdure miste (piselli, carote e fagiolini) Verdure miste (piselli, carote e mais dolce)"
     },
     {
-      "id": 13,
+      "id": 9,
       "category": "vegetable",
       "status": "iqf",
       "name_ar": "فول",
@@ -230,7 +164,7 @@
       "description_it": "Scopri il sapore intenso e i benefici per la salute delle migliori fave egiziane con la nostra varietà surgelata premium. Coltivate nel Delta del Nilo, queste fave sono un alimento base della cucina mediorientale. Lavorate in due modi: Sbucciate Con buccia"
     },
     {
-      "id": 14,
+      "id": 10,
       "category": "vegetable",
       "status": "iqf",
       "name_ar": "ملوخية",
@@ -242,7 +176,7 @@
       "description_it": "Noto anche come molokhia o spinaci egiziani, questo ingrediente è un alimento base della cucina mediorientale e la nostra varietà congelata significa che il nostro prodotto surgelato non richiede lavaggio, taglio o conservazione prolungata. I nostri prodotti sono disponibili nelle seguenti varietà: Foglie intere. Foglie tritate."
     },
     {
-      "id": 15,
+      "id": 11,
       "category": "vegetable",
       "status": "iqf",
       "name_ar": "سبانخ",
@@ -254,7 +188,7 @@
       "description_it": "I nostri spinaci surgelati mantengono la naturale dolcezza e consistenza della verdura, rendendoli facili da usare in una varietà di piatti. I nostri prodotti sono disponibili nelle seguenti varietà: Foglie tritate."
     },
     {
-      "id": 16,
+      "id": 12,
       "category": "vegetable",
       "status": "iqf",
       "name_ar": "ذرة حلوة",
@@ -266,7 +200,7 @@
       "description_it": "Il mais dolce congelato conserva la naturale bontà della verdura, rendendolo un ingrediente semplice e pratico per molti piatti. I nostri prodotti sono disponibili nelle seguenti varietà: Mais dolce (chicchi). Mais dolce (pannocchie)."
     },
     {
-      "id": 17,
+      "id": 13,
       "category": "vegetable",
       "status": "iqf",
       "name_ar": "بصل",
@@ -278,7 +212,7 @@
       "description_it": "Ricche di vitamine, minerali e antiossidanti essenziali, le nostre cipolle egiziane surgelate non sono solo deliziose, ma anche un'eccellente fonte di vitamina C, fibre e manganese. Questo ortaggio ricco di nutrienti è un modo fantastico per aggiungere più bontà vegetale ai pasti della tua famiglia."
     },
     {
-      "id": 18,
+      "id": 14,
       "category": "vegetable",
       "status": "in_brine",
       "name_ar": "فلفل هالابينو أحمر",
@@ -290,7 +224,7 @@
       "description_it": "Viene utilizzato nella cucina egiziana e in vari piatti in tutto il mondo come spezia in insalate, salse e sottaceti, e può essere servito fresco o marinato. Viene coltivato in Egitto in aziende agricole specializzate. Disponibili Fusti industriali: 225/160 kg Tipi: (0,5 - 1,0 cm)"
     },
     {
-      "id": 19,
+      "id": 15,
       "category": "vegetable",
       "status": "in_brine",
       "name_ar": "فلفل حار",
@@ -302,7 +236,7 @@
       "description_it": "Contiene capsaicina, che gli conferisce il suo sapore piccante. Ha molteplici usi culinari e benefici per la salute, come rafforzare il sistema immunitario, migliorare la circolazione sanguigna e favorire la perdita di peso. Fusti industriali: 225/160 kg Tipi: 0,5 - 1,0 cm"
     },
     {
-      "id": 20,
+      "id": 16,
       "category": "vegetable",
       "status": "iqf",
       "name_ar": "البطاطس",
@@ -314,7 +248,7 @@
       "description_it": "Patatine fritte parzialmente fritte e poi rapidamente congelate per preservarne il sapore e la croccantezza. Sono facili e veloci da cuocere in forno, nella friggitrice ad aria o in padella e sono una buona fonte di energia (carboidrati)."
     },
     {
-      "id": 21,
+      "id": 17,
       "category": "vegetable",
       "status": "iqf",
       "name_ar": "خضروات مشكل",
@@ -326,7 +260,7 @@
       "description_it": "Un mix di verdure fresche, spesso surgelate per risparmiare tempo e aumentare il valore nutrizionale, come piselli, carote, fagiolini e mais, viene utilizzato in molti piatti egiziani. È ricco di vitamine, minerali e fibre. Può essere cucinato come contorno a parte. Può essere aggiunto a zuppe, riso, stufati, carni e pollo. Può essere utilizzato nelle insalate o come piatto di verdure saltate."
     },
     {
-      "id": 22,
+      "id": 18,
       "category": "vegetable",
       "status": [
         "iqf",
@@ -341,7 +275,7 @@
       "description_it": "Le carote fresche vengono pelate, affettate e rapidamente congelate per preservarne il sapore e il valore nutrizionale. Utilizzate in molte ricette, come zuppe e stufati, hanno una lunga conservazione e sono facili da usare, poiché possono essere cucinate direttamente dal congelatore. Sono una buona fonte di vitamina A e fibre."
     },
     {
-      "id": 23,
+      "id": 19,
       "category": "vegetable",
       "status": [
         "iqf",
@@ -356,7 +290,7 @@
       "description_it": "Un'eccellente opzione alimentare che preserva il sapore e i benefici dei peperoni freschi grazie al congelamento rapido, e può essere utilizzata in una varietà di piatti, come insalate, grigliate e pasta. Preparati tagliando e lavando i peperoni, vengono poi congelati rapidamente e possono essere conservati nel congelatore fino a un anno."
     },
     {
-      "id": 24,
+      "id": 20,
       "category": "vegetable",
       "status": [
         "iqf",
@@ -371,7 +305,7 @@
       "description_it": "I peperoncini ciliegia sott'aceto sono un metodo per preparare peperoncini piccanti (come i peperoncini ciliegia o i jalapeño) e conservarli a lungo utilizzando una soluzione di salamoia e aceto. Sono facili da preparare e possono essere utilizzati come contorno o antipasto. Sono anche noti per il loro sapore piccante e possono essere preparati rapidamente o lasciati riposare per un periodo più lungo."
     },
     {
-      "id": 25,
+      "id": 21,
       "category": "fruit",
       "status": [
         "iqf",
@@ -398,7 +332,7 @@
       ]
     },
     {
-      "id": 26,
+      "id": 22,
       "category": "fruit",
       "status": [
         "fruit",
@@ -413,7 +347,7 @@
       "description_it": "La sua alta qualità, il sapore dolce e il ricco contenuto di succo e vitamina C lo rendono una scelta popolare. Le sue varietà principali, come la navel e la Valencia, vengono prodotte in stagioni diverse e contengono nutrienti importanti come il potassio, che rafforza il sistema immunitario e favorisce la salute del cuore e dell'apparato digerente."
     },
     {
-      "id": 27,
+      "id": 23,
       "category": "fruit",
       "status": [
         "iqf",

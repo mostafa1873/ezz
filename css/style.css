@@ -731,75 +731,83 @@ nav.scrolled .dropdown-btn {
 /* WhatsApp Floating Button */
 
 .whatsapp-wrapper {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 9999;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
 }
 
 .whatsapp-float {
-  background-color: #25D366;
-  color: #fff;
-  font-size: 22px;
-  padding: 16px;
-  border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none; 
+    background-color: #25D366;
+    color: #fff;
+    font-size: 22px;
+    padding: 16px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .whatsapp-float:hover {
-  transform: translateY(-5px) scale(1.05);
-  background-color: #1ebd5a;
+    transform: translateY(-5px) scale(1.05);
+    background-color: #1ebd5a;
 }
 
 @keyframes floatPulse {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .whatsapp-float {
-  animation: floatPulse 3s infinite ease-in-out;
+    animation: floatPulse 3s infinite ease-in-out;
 }
 
 .whatsapp-tooltip {
-  position: absolute;
-  bottom: 65px;
-  right: 0;
-  background-color: #fff;
-  color: #333;
-  font-size: 14px;
-  padding: 8px 14px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(10px);
-  transition: all 0.4s ease;
-  font-family: 'Poppins', sans-serif;
+    position: absolute;
+    bottom: 65px;
+    right: 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    font-family: 'Poppins', sans-serif;
 }
 
 .whatsapp-tooltip::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  right: 20px;
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  transform: rotate(45deg);
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    transform: rotate(45deg);
 }
 
 .whatsapp-wrapper.show-tooltip .whatsapp-tooltip {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* WhatsApp Floating Button */
@@ -1019,6 +1027,13 @@ nav.scrolled .dropdown-btn {
 
     .footer-logo {
         width: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    .spinner {
+        width: 125px;
+        height: 150px;
     }
 }
 

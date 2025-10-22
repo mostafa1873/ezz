@@ -368,8 +368,8 @@
       "name_it": "Peperoncino jalapeno rosso",
       "image": "../image/product18.jpg",
       "description_ar": "يُستخدم في المطبخ المصري، وفي أطباق متنوعة حول العالم، كتوابل في السلطات والصلصات والمخللات، ويُقدم طازجًا أو متبلًا. يُزرع في مصر في مزارع متخصصة متوفر براميل صناعية احجامها:",
-      "description_en": "It is used in Egyptian cuisine and various dishes around the world as a spice in salads, sauces, and pickles, and can be served fresh or marinated. It is grown in Egypt on specialized farms, Available Industrial drums: 225/160 kg Types: (0.5 - 1.0 cm)",
-      "description_it": "Viene utilizzato nella cucina egiziana e in vari piatti in tutto il mondo come spezia in insalate, salse e sottaceti, e può essere servito fresco o marinato. Viene coltivato in Egitto in aziende agricole specializzate. Disponibili Fusti industriali: 225/160 kg Tipi: (0,5 - 1,0 cm)",
+      "description_en": "It is used in Egyptian cuisine and various dishes around the world as a spice in salads, sauces, and pickles, and can be served fresh or marinated. It is grown in Egypt on specialized farms, Available Industrial drums:",
+      "description_it": "Viene utilizzato nella cucina egiziana e in vari piatti in tutto il mondo come spezia in insalate, salse e sottaceti, e può essere servito fresco o marinato. Viene coltivato in Egitto in aziende agricole specializzate. Disponibili Fusti industriali:",
       "variants": [
         {
           "name_en": "140 kg (0.5 - 1.0 cm) barrel",
@@ -396,9 +396,9 @@
       "name_en": "Green jalapeno peppers",
       "name_it": "Peperoncini jalapeno verdi",
       "image": "../image/felfel.jpg",
-      "description_ar": "يحتوي على مادة الكابسيسين، التي تُعطيه حرارته. له استخدامات طهي وفوائد صحية متعددة، مثل تعزيز المناعة، وتحسين الدورة الدموية، والمساعدة على إنقاص الوزن. براميل صناعية ٢٢٥/١٦٠ كجم تتوفر الأنواع:",
-      "description_en": "It contains capsaicin, which gives it its heat. It has multiple culinary uses and health benefits, such as boosting immunity, improving blood circulation, and aiding weight loss. Industrial drums: 225/160 kg Types: 0.5 - 1.0 cm",
-      "description_it": "Contiene capsaicina, che gli conferisce il suo sapore piccante. Ha molteplici usi culinari e benefici per la salute, come rafforzare il sistema immunitario, migliorare la circolazione sanguigna e favorire la perdita di peso. Fusti industriali: 225/160 kg Tipi: 0,5 - 1,0 cm",
+      "description_ar": "يحتوي على مادة الكابسيسين، التي تُعطيه حرارته. له استخدامات طهي وفوائد صحية متعددة، مثل تعزيز المناعة، وتحسين الدورة الدموية، والمساعدة على إنقاص الوزن تتوفر الأنواع:",
+      "description_en": "It contains capsaicin, which gives it its heat. It has multiple culinary uses and health benefits, such as boosting immunity, improving blood circulation, and aiding weight loss:",
+      "description_it": "Contiene capsaicina, che gli conferisce il suo sapore piccante. Ha molteplici usi culinari e benefici per la salute, come rafforzare il sistema immunitario, migliorare la circolazione sanguigna e favorire la perdita di peso:",
       "variants": [
         {
           "name_en": "140 kg (0.5 - 1.0 cm) barrel",

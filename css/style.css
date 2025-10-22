@@ -840,7 +840,7 @@ nav.scrolled .dropdown-btn {
 }
 
 .footer-logo {
-    width: 110px;
+    width: 160px;
     margin-bottom: 15px;
     filter: brightness(1.1);
 }
@@ -1026,7 +1026,7 @@ nav.scrolled .dropdown-btn {
     }
 
     .footer-logo {
-        width: 90px;
+        width: 125px;
     }
 }
 

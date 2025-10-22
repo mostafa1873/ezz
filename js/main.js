@@ -100,6 +100,12 @@ function getBasePath() {
 }
 
 
+// ✅ GO TO CATEGORY FUNCTION (NEW)
+function goToCategory(category) {
+    window.location.href = `${getBasePath()}pages/products.html?category=${category}`;
+}
+
+
 //  MULTI LANGUAGE SYSTEM
 const supportedLangs = ["EN", "AR", "IT"];
 let currentLang = localStorage.getItem("lang") || "EN";
@@ -193,6 +199,10 @@ async function loadProducts() {
     const data = await response.json();
     const products = data.products;
 
+    // ✅ قراءة الفئة من الـ URL
+    const params = new URLSearchParams(window.location.search);
+    const selectedCategory = params.get("category");
+
     function displayProducts(list) {
         productGrid.innerHTML = "";
         list.forEach(product => {
@@ -213,7 +223,13 @@ async function loadProducts() {
         });
     }
 
-    displayProducts(products);
+    // ✅ فلترة المنتجات لو فيه فئة محددة
+    let filteredProducts = products;
+    if (selectedCategory) {
+        filteredProducts = products.filter(p => p.category.toLowerCase() === selectedCategory.toLowerCase());
+    }
+
+    displayProducts(filteredProducts);
     await reapplyTranslations();
 
     filterButtons.forEach(btn => {
@@ -264,7 +280,7 @@ async function loadProductDetails() {
     document.querySelector(".product-info h2").textContent = name;
     document.querySelector(".product-desc").textContent = desc;
 
-    //  Variants Section (Available Types) 
+    //  Variants Section
     const variantSection = document.querySelector(".variant-grid");
     if (variantSection) {
         variantSection.innerHTML = "";
@@ -280,7 +296,6 @@ async function loadProductDetails() {
     }
 
     //  Best Sellers 
-
     const bestGrid = document.querySelector(".best-sellers .product-grid");
     if (bestGrid) {
         const bestSellers = products.filter(p => p.id !== currentProduct.id).slice(0, 4);
@@ -314,8 +329,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loadProductDetails();
 });
 
-// SCROLL ANIMATIONS
 
+// SCROLL ANIMATIONS
 document.addEventListener('DOMContentLoaded', () => {
     const missionSection = document.getElementById('missionSection') || document.querySelector('.mission');
     if (missionSection) {
@@ -327,13 +342,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, { threshold: 0.1 });
-
         observer.observe(missionSection);
     }
 });
 
-// JOURNEY ANIMATION
 
+// JOURNEY ANIMATION
 document.addEventListener('DOMContentLoaded', () => {
     const journeyItems = document.querySelectorAll('.journey-item');
     if (journeyItems.length > 0) {
@@ -345,14 +359,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, { threshold: 0.2 });
-
         journeyItems.forEach(item => observer.observe(item));
     }
 });
 
 
-// ANIMATIONS (main show-animation logic)
-
+// ANIMATIONS
 document.addEventListener('DOMContentLoaded', () => {
     const elementsToAnimate = document.querySelectorAll(
         '.about-hero h1, .about-hero p, .about-company .about-text, .about-company .about-img, .mission-box, .why-us h2, .why-us .section-description, .why-us .reason-point, .global-reach-map h2, .global-reach-map p, .global-reach-map .map-container img, .global-reach-map .stats-bar'
@@ -377,11 +389,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('scroll', checkAnimation);
-    // run once to reveal items already in viewport
     checkAnimation();
 });
+
 
 // WHATSAPP TOOLTIP
 setTimeout(() => document.querySelector('.whatsapp-wrapper')?.classList.add('show-tooltip'), 2000);
 setTimeout(() => document.querySelector('.whatsapp-wrapper')?.classList.remove('show-tooltip'), 7000);
-

@@ -5,7 +5,7 @@
 }
 
 .products-hero-banner {
-    background-color: #081c10;
+    background-color: #fff;
     color: white;
     height: 100px;
     display: flex;
@@ -101,13 +101,19 @@
     padding: 15px;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff;
     cursor: pointer;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    top: 0;
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .product-img-box {

@@ -7,7 +7,7 @@
 
     <!-- META TAGS -->
     <link rel="icon" type="image/x-icon" href="../images/logo-ezz.png">
-    <title data-lang="meta-page-contact"></title>
+    <title data-lang="meta-page-contact">Ezz Exports Contact Us</title>
     <meta name="title" content="Contact Us Ezz Exports company strictly specializing in Agricultural Export">
     <meta name="description"
         content="Ezz Exports combining deep expertise in handling fresh produce with a commitment to global quality standards.">
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/contact.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -38,10 +39,10 @@
         </div>
 
         <div class="nav-links" id="navLinks">
-            <a data-lang="nav-home" href="../index.html" class="side-link"></a>
-            <a data-lang="nav-about" href="about.html" class="side-link"></a>
-            <a data-lang="nav-Products" href="products.html" class="side-link"></a>
-            <a data-lang="nav-contact" href="contact.html" class="side-link"></a>
+            <a data-lang="nav-home" href="../index.html" class="side-link">Home</a>
+            <a data-lang="nav-about" href="about.html" class="side-link">About</a>
+            <a data-lang="nav-Products" href="products.html" class="side-link">Products</a>
+            <a data-lang="nav-contact" href="contact.html" class="side-link">Contact</a>
 
             <div class="lang-dropdown">
                 <button class="lang-btn" id="langBtn">EN</button>
@@ -65,10 +66,10 @@
             <img src="../images/greenrow.png" alt="Ezz Company Logo">
         </div>
 
-        <a data-lang="nav-home" href="../index.html"></a>
-        <a data-lang="nav-about" href="about.html"></a>
-        <a data-lang="nav-Products" href="products.html" class="side-link"></a>
-        <a data-lang="nav-contact" href="contact.html"></a>
+        <a data-lang="nav-home" href="../index.html">Home</a>
+        <a data-lang="nav-about" href="about.html">About</a>
+        <a data-lang="nav-Products" href="products.html" class="side-link">Products</a>
+        <a data-lang="nav-contact" href="contact.html">Contact</a>
 
         <div class="lang-dropdown">
             <button class="lang-btn" id="langBtnSide">EN</button>
@@ -82,113 +83,142 @@
     <!-- NAVBAR -->
 
 
-    <!-- NAV COLOR -->
-    <div class="products-hero-banner">
-        <div class="hero-content">
-        </div>
-    </div>
-    <!-- NAV COLOR -->
-
-
-
     <!-- MAIN -->
+    <main class="contact-page">
+        <!-- Hero Section -->
+        <div class="contact-hero">
+            <h1 class="glowing-text" data-lang="contact-title">Contact Us</h1>
+            <p class="hero-subtitle" data-lang="contact-subtitle">Get in touch with us</p>
+        </div>
 
-    <main class="contact-main">
-
-        <section class="contact-details-panel">
-            <h1 class="section-heading" data-lang="contact-us-h1"></h1>
-            <p data-lang="contact-intro-p"></p>
-
-            <div class="detail-item">
-                <i class="fa-solid fa-envelope"></i>
-                <div>
-                    <h3 data-lang="contact-page-h3-1"></h3>
-                    <a href="mailto:info@ezztrading.com">info@ezztrading.com</a>
+        <!-- 3D Cards Section -->
+        <div class="contact-cards">
+            <div class="card-3d">
+                <div class="card-content">
+                    <div class="card-front">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-headset"></i>
+                            <div class="icon-bg-circle"></div>
+                        </div>
+                        <h3 data-lang="contact_call_title">Call Us</h3>
+                    </div>
+                    <div class="card-back">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <a href="tel:+20 1109458208" dir="ltr">+20 1109458208</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <a href="tel:+20 1109458208" dir="ltr">+20 1109458208</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="detail-item">
-                <i class="fa-solid fa-phone"></i>
-                <div>
-                    <h3 data-lang="contact-page-h3-2"></h3>
-                    <a href="tel:+201112223333">+20 111 222 3333</a>
+            <div class="card-3d">
+                <div class="card-content">
+                    <div class="card-front">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-envelope-circle-check"></i>
+                            <div class="icon-bg-circle"></div>
+                        </div>
+                        <h3 data-lang="contact_email_title">Email Us</h3>
+                    </div>
+                    <div class="card-back">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                            <a href="mailto:hamdyamin28123@gmail.com">info@ezzexport.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <a href="mailto:hamdyamin28123@gmail.com">info@ezzexport.com</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="detail-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <div>
-                    <h3 data-lang="contact-page-h3-3"></h3>
-                    <p data-lang="contact-page-p-1"></p>
+            <div class="card-3d">
+                <div class="card-content">
+                    <div class="card-front">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="icon-bg-circle"></div>
+                        </div>
+                        <h3 data-lang="contact_visit_title">Visit Us</h3>
+                    </div>
+                    <div class="card-back">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <p data-lang="contact_address">Court Street,<br>Kafr El-Dawar,<br>Beheira, Egypt</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="detail-item">
-                <i class="fa-solid fa-clock"></i>
-                <div>
-                    <h3 data-lang="contact-page-h3-4"></h3>
-                    <p data-lang="contact-page-p-2"></p>
+        <!-- Contact Form Section -->
+        <div class="form-section">
+            <div class="form-container">
+                <div class="form-3d">
+                    <h2 data-lang="contact_form_title">Send Message</h2>
+                    <form id="contactForm" onsubmit="return sendEmail(event)">
+                        <div class="input-group">
+                            <i class="fas fa-user-circle input-icon"></i>
+                            <input type="text" id="name" name="name" required>
+                            <label data-lang="contact_form_name">Full Name</label>
+                            <div class="input-border"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fas fa-at input-icon"></i>
+                            <input type="email" id="email" name="email" required>
+                            <label data-lang="contact_form_email">Email Address</label>
+                            <div class="input-border"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fas fa-phone input-icon"></i>
+                            <input type="tel" id="phone" name="phone" required>
+                            <label data-lang="contact_form_phone">Phone Number</label>
+                            <div class="input-border"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fas fa-message input-icon"></i>
+                            <textarea id="message" name="message" required></textarea>
+                            <label data-lang="contact_form_message">Your Message</label>
+                            <div class="input-border"></div>
+                        </div>
+
+                        <button type="submit" class="submit-3d" id="submit-btn">
+                            <span data-lang="contact_form_button">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <!-- إضافة عنصر لعرض رسائل النجاح/الخطأ -->
+                    <div id="form-message"></div>
                 </div>
             </div>
+        </div>
 
-        </section>
-
-        <section class="contact-form-section">
-            <h2 class="section-heading" data-lang="contact-form-h2"></h2>
-            <form action="#" method="POST" class="contact-form">
-
-                <div class="form-group">
-                    <label data-lang="contact-page-label-1" for="name"></label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label data-lang="contact-page-label-2" for="company"></label>
-                    <input type="text" id="company" name="company" placeholder="Required for business inquiries">
-                </div>
-
-                <div class="form-group">
-                    <label data-lang="contact-page-label-3" for="email"></label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label data-lang="contact-page-label-4" for="phone"></label>
-                    <input type="tel" id="phone" name="phone" placeholder="Include Country Code">
-                </div>
-
-                <div class="form-group">
-                    <label data-lang="contact-page-label-5" for="message"></label>
-                    <textarea id="message" name="message" rows="6" required
-                        placeholder="Tell us about your needs and requirements..."></textarea>
-                </div>
-
-                <button type="submit" data-lang="contact-page-btn" class="submit-button"></button>
-            </form>
-        </section>
-
-        <section class="location-map">
-            <h2 class="section-heading" data-lang="map-h2"></h2>
-            <div class="map-placeholder">
+        <!-- Map Section -->
+        <div class="map-section">
+            <div class="map-container">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.83402636783!2d31.189569032517878!3d30.05948950293297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60e719369%3A0x6b876e4c70030238!2sCairo%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1704543788888!5m2!1sen!2seg"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d205.0995015071452!2d30.131792164941128!3d31.137790399593882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2seg!4v1761572306306!5m2!1sen!2seg"
+                    allowfullscreen="" loading="lazy"></iframe>
             </div>
-        </section>
-
+        </div>
     </main>
-
     <!-- MAIN -->
 
 
     <!-- WhatsApp Floating Button -->
     <div class="whatsapp-wrapper">
-        <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <a href="https://wa.me/201109458208" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <div data-lang="whatsaap-button" class="whatsapp-tooltip"></div>
+        <div data-lang="whatsaap-button" class="whatsapp-tooltip">Contact us on WhatsApp</div>
     </div>
     <!-- WhatsApp Floating Button -->
 
@@ -201,27 +231,29 @@
                 <a href="../index.html"><img class="footer-logo" src="../images/greenrow.png"
                         alt="Ezz Exports company strictly specializing in Agricultural Export"></a>
                 <p data-lang="footer-brand-p">
+                    We export premium Egyptian vegetables worldwide with quality and trust.
                 </p>
             </div>
 
             <!-- Links -->
             <div class="footer-section">
-                <h3 data-lang="footer-links-h3"></h3>
+                <h3 data-lang="footer-links-h3">Explore</h3>
                 <ul>
-                    <li><a data-lang="footer-links-home" href="../index.html"></a></li>
-                    <li><a data-lang="footer-links-about" href="about.html"></a></li>
-                    <li><a data-lang="footer-links-products" href="vegetables.html"></a></li>
-                    <li><a data-lang="footer-links-contact" href="contact.html"></a></li>
+                    <li><a data-lang="footer-links-home" href="../index.html">Home</a></li>
+                    <li><a data-lang="footer-links-about" href="about.html">About Us</a></li>
+                    <li><a data-lang="footer-links-products" href="products.html">Products</a></li>
+                    <li><a data-lang="footer-links-contact" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
 
             <!-- Contact -->
             <div class="footer-section">
-                <h3 data-lang="footer-contact-h3"></h3>
+                <h3 data-lang="footer-contact-h3">Contact</h3>
                 <ul>
-                    <li><i class="fa-solid fa-phone"></i> +20 111 222 3333</li>
-                    <li><i class="fa-solid fa-envelope"></i> info@ezztrading.com</li>
-                    <li data-lang="footer-contact-adress"><i class="fa-solid fa-location-dot"></i></li>
+                    <li><i class="fa-solid fa-phone"></i> <span dir="ltr">+20 1109458208</span></li>
+                    <li><i class="fa-solid fa-envelope"></i> info@ezzexport.com</li>
+                    <li data-lang="footer-contact-adress"><i class="fa-solid fa-location-dot"></i>Kafr El Dawwar, El
+                        Beheira, Egypt</li>
                 </ul>
             </div>
 
@@ -229,10 +261,13 @@
             <div class="footer-section">
                 <h3 data-lang="footer-social-h3"></h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a target="_blank" href="https://web.facebook.com/profile.php?id=61582088223661"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a target="_blank"
+                        href="https://www.instagram.com/ezzexport/?fbclid=IwY2xjawNsKVpleHRuA2FlbQIxMQBicmlkETEwN2xjblIzdTRhNmpKZ2tPAR7k_hx9Tk12NMj34rMICVpeqJavdX_0OOiGNwksXLF4QkQh6xjWh5Z9BqjD0w_aem_EiVZGu7OHrur6W-PHTp5Eg"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/ezz-export/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
@@ -246,7 +281,14 @@
     </footer>
     <!-- Footer -->
 
+    <script src="../js/contact.js"></script>
     <script src="../js/main.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
 </body>
 
 </html>

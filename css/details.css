@@ -9,7 +9,7 @@ body {
     width: 90%;
     max-width: 1300px;
     padding: 100px 0;
-    margin: auto;
+    margin: 20px auto;
 }
 
 /*  HERO  */
@@ -23,7 +23,6 @@ body {
 
 .product-hero h1 {
     font-size: 2.6rem;
-    /* كان 3rem */
     font-weight: 700;
 }
 
@@ -34,7 +33,7 @@ body {
     gap: 40px;
     align-items: center;
     justify-content: space-between;
-    padding: 70px 0;
+    padding: 40px;
     flex-wrap: wrap;
 }
 

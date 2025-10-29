@@ -163,15 +163,16 @@ nav.scrolled .menu-icon div {
     right: auto;
     width: 260px;
     height: 100%;
-    background: #fff;
-    color: #062d1b;
+    background: #081c10;
+    color: #fff;
     display: flex;
     flex-direction: column;
-    padding-top: 90px;
+    padding-top: 70px;
     gap: 20px;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 20px;
     transition: 0.4s ease;
-    z-index: 1000;
+    z-index: 10010;
 }
 
 .side-menu.active {
@@ -180,11 +181,11 @@ nav.scrolled .menu-icon div {
 }
 
 .side-menu a {
-    color: #062d1b;
+    color: #fff;
     font-size: 1.1rem;
     text-decoration: none;
     transition: 0.3s;
-    padding: 10px 0;
+    padding: 7px 0;
 }
 
 .side-menu a:hover {
@@ -200,9 +201,9 @@ nav.scrolled .menu-icon div {
 
 .side-menu .lang-dropdown {
     width: auto;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
     color: #333;
 }
 
@@ -217,6 +218,118 @@ nav.scrolled .menu-icon div {
     height: 50px;
     margin-bottom: 20px;
 }
+
+/* ===================== RTL ===================== */
+[dir="rtl"] .side-menu {
+    left: auto;
+    right: -260px;
+    align-items: flex-start;
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+[dir="rtl"] .side-menu.active {
+    right: 0;
+    left: auto;
+}
+
+[dir="rtl"] .side-menu .side-logo img {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+[dir="rtl"] .side-menu a {
+    text-align: right;
+}
+
+[dir="rtl"] .side-menu .lang-btn {
+    text-align: right;
+}
+
+/* CONTACT */
+
+.side-contact {
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+.side-contact .contact-ite {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 6px 0;
+    width: 100%;
+    transition: color 0.3s ease, transform 0.2s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.side-contact .contact-ite i {
+    font-size: 1.2rem;
+    color: #35e41a;
+    flex-shrink: 0;
+}
+
+.side-contact .contact-ite:hover {
+    color: #35e41a;
+    transform: translateX(4px);
+}
+
+[dir="rtl"] .side-contact {
+    text-align: right;
+    align-items: flex-start;
+}
+
+[dir="rtl"] .side-contact .contact-ite {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .side-contact i {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+.side-contact .phone {
+  direction: ltr !important;
+  unicode-bidi: bidi-override !important;
+  text-align: left !important;
+  display: inline-block;
+}
+
+/* ✅ Responsive */
+@media (max-width: 600px) {
+    .side-contact {
+        padding-top: 5px;
+        gap: 8px;
+    }
+
+    .side-contact .contact-ite {
+        font-size: 0.9rem;
+        gap: 8px;
+    }
+
+    .side-contact .contact-ite i {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+/* SIDE BAR */
+
+
 
 /* DROWP DONE */
 

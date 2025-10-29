@@ -275,7 +275,8 @@
 
 @media (max-width: 768px) {
     .about-hero {
-        height: 65vh;
+        margin-top: 50px;
+        height: 75vh;
     }
 
     .about-hero h1 {

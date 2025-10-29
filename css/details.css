@@ -102,43 +102,84 @@ body {
     font-size: 2rem;
     color: #136d41;
     position: relative;
+    text-align: center;
 }
 
 .product-info h2:nth-of-type(2)::after {
     content: "";
     position: absolute;
-    inset-inline-start: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -6px;
-    width: 60px;
+    width: 250px;
     height: 3px;
     background-color: #136d41;
     border-radius: 2px;
 }
 
+/* ===== Responsive ===== */
+
+/* للأجهزة المتوسطة (تابلت) */
+@media (max-width: 992px) {}
+
+/* للموبايلات */
+
+
+
+
+/* VARINT */
+
 .variant-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     margin-top: 20px;
 }
 
 .variant-item {
-    background: #ffffff;
-    border: 1px solid #e1e1e1;
-    border-radius: 15px;
-    padding: 15px 20px;
+    position: relative;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #e1e1e1;
+    border-radius: 0;
+    padding: 10px 20px 10px 30px;
     font-size: 1.1rem;
     color: #333;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: none;
+    text-align: left;
     transition: all 0.3s ease;
-    text-align: center;
+}
+
+.variant-item::before {
+    content: "•";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #136d41;
+    font-size: 1.3rem;
 }
 
 .variant-item:hover {
-    background: #136d41;
-    color: #fff;
-    transform: translateY(-3px);
+    background: #f9f9f9;
 }
+
+/* RTL support */
+
+[dir="rtl"] .variant-item {
+    direction: rtl;
+    text-align: right;
+    padding: 10px 30px 10px 20px;
+}
+
+[dir="rtl"] .variant-item::before {
+    left: auto;
+    right: 10px;
+}
+
+/* VARINT */
+
+
 
 /*  BEST SELLERS  */
 
@@ -185,6 +226,17 @@ body {
 
 /*  Responsive  */
 @media (max-width: 992px) {
+
+    .product-info h2:nth-of-type(2) {
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+
+    .product-info h2:nth-of-type(2)::after {
+        width: 200px;
+        height: 3px;
+    }
+
     .product-details {
         flex-direction: column;
         text-align: center;
@@ -205,5 +257,70 @@ body {
 
     .product-desc {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .variant-item {
+        padding: 8px 16px 8px 26px;
+        font-size: 1rem;
+    }
+
+    .variant-item::before {
+        font-size: 1.1rem;
+        left: 8px;
+    }
+
+    [dir="rtl"] .variant-item {
+        padding: 8px 26px 8px 16px;
+    }
+
+    [dir="rtl"] .variant-item::before {
+        right: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-info h2:nth-of-type(2) {
+        font-size: 1.5rem;
+        margin-top: 25px;
+    }
+
+    .product-info h2:nth-of-type(2)::after {
+        width: 150px;
+        height: 2.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .variant-item {
+        padding: 6px 14px 6px 24px;
+        font-size: 0.95rem;
+    }
+
+    .variant-item::before {
+        font-size: 1rem;
+        left: 6px;
+    }
+
+    [dir="rtl"] .variant-item {
+        padding: 6px 24px 6px 14px;
+    }
+
+    [dir="rtl"] .variant-item::before {
+        right: 6px;
+    }
+}
+
+@media (max-width: 400px) {
+    .product-info h2:nth-of-type(2) {
+        font-size: 1.3rem;
+        margin-top: 20px;
+    }
+
+    .product-info h2:nth-of-type(2)::after {
+        width: 120px;
+        height: 2px;
     }
 }

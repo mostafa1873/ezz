@@ -169,7 +169,7 @@ nav.scrolled .menu-icon div {
     flex-direction: column;
     padding-top: 70px;
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
     padding-left: 20px;
     transition: 0.4s ease;
     z-index: 10010;
@@ -202,8 +202,8 @@ nav.scrolled .menu-icon div {
 .side-menu .lang-dropdown {
     width: auto;
     text-align: left;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     color: #333;
 }
 
@@ -223,7 +223,7 @@ nav.scrolled .menu-icon div {
 [dir="rtl"] .side-menu {
     left: auto;
     right: -260px;
-    align-items: flex-start;
+    align-items: center;
     padding-left: 0;
     padding-right: 30px;
 }
@@ -239,11 +239,11 @@ nav.scrolled .menu-icon div {
 }
 
 [dir="rtl"] .side-menu a {
-    text-align: right;
+    text-align: center;
 }
 
 [dir="rtl"] .side-menu .lang-btn {
-    text-align: right;
+    text-align: center;
 }
 
 /* CONTACT */
@@ -264,7 +264,7 @@ nav.scrolled .menu-icon div {
     font-size: 0.95rem;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 10px;
     padding: 6px 0;
     width: 100%;
@@ -286,13 +286,13 @@ nav.scrolled .menu-icon div {
 }
 
 [dir="rtl"] .side-contact {
-    text-align: right;
-    align-items: flex-start;
+    text-align: center;
+    align-items: center;
 }
 
 [dir="rtl"] .side-contact .contact-ite {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 [dir="rtl"] .side-contact i {
@@ -307,7 +307,6 @@ nav.scrolled .menu-icon div {
   display: inline-block;
 }
 
-/* ✅ Responsive */
 @media (max-width: 600px) {
     .side-contact {
         padding-top: 5px;

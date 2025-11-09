@@ -5,12 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- META TAGS -->
-    <link rel="icon" type="image/x-icon" href="images/logo-ezz.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo-ezz.webp">
+
+    <!-- SEO META TAGS -->
     <title data-lang="meta-page-home">Ezz Vegetable Exports | From Farm to World</title>
-    <meta name="title" content="Ezz Exports company strictly specializing in Agricultural Export">
+    <link rel="canonical" href="https://ezzexports.com/">
+    <meta name="title" content="Ezz Exports | Specialized Agricultural Export">
     <meta name="description"
-        content="Ezz Exports combining deep expertise in handling fresh produce with a commitment to global quality standards.">
+        content="Ezz Vegetable Exports delivers premium fresh produce worldwide, ensuring quality and reliability from farm to market.">
+    <meta name="keywords"
+        content="Vegetable exports, Fresh produce, Agricultural export, Ezz Exports, Worldwide delivery">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Ezz Vegetable Exports – Fresh Produce Export Worldwide">
+    <meta property="og:description"
+        content="Ezz Vegetable Exports delivers premium fresh produce worldwide, ensuring quality and reliability from farm to market.">
+    <meta property="og:image" content="https://ezzexports.com/images/logo-ezz.png">
+    <meta property="og:url" content="https://ezzexports.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ezz Vegetable Exports – Fresh Produce Export Worldwide">
+    <meta name="twitter:description"
+        content="Ezz Vegetable Exports delivers premium fresh produce worldwide, ensuring quality and reliability from farm to market.">
+    <meta name="twitter:image" content="https://ezzexports.com/images/logo-ezz.png">
+
     <!-- TAGS -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,14 +46,14 @@
 <body>
 
     <div id="preloader">
-        <img src="images/logo-ezz.png" class="spinner">
+        <img src="images/logo-ezz.webp" class="spinner">
         </img>
     </div>
 
     <!-- NAVBAR -->
     <nav id="navbar">
         <div class="logo">
-            <a href="index.html"><img src="images/greenrow.png"
+            <a href="index.html"><img src="images/greenrow.webp"
                     alt="Ezz Exports company strictly specializing in Agricultural Export"></a>
         </div>
 
@@ -56,43 +78,24 @@
             <div></div>
             <div></div>
         </div>
-    </nav>
-    <!-- SIDE MENU (Mobile) -->
-    <div class="side-menu" id="sideMenu">
-        <div class="side-logo">
-            <img src="images/greenrow.png" alt="Azz Logo">
-        </div>
 
-        <a data-lang="nav-home" href="index.html">Home</a>
-        <a data-lang="nav-about" href="pages/about.html">About</a>
-        <a data-lang="nav-Products" href="pages/products.html" class="side-link">Products</a>
-        <a data-lang="nav-contact" href="pages/contact.html">Contact</a>
+        <!-- MOBILE DROPDOWN UNDER NAV -->
+        <div class="mobile-dropdown" id="mobileDropdown">
+            <a data-lang="nav-home" href="index.html">Home</a>
+            <a data-lang="nav-about" href="pages/about.html">About</a>
+            <a data-lang="nav-Products" href="pages/products.html">Products</a>
+            <a data-lang="nav-contact" href="pages/contact.html">Contact</a>
 
-        <div class="lang-dropdown">
-            <button class="lang-btn" id="langBtnSide">EN</button>
-            <div class="lang-menu" id="langMenuSide">
-                <button>EN</button>
-                <button>IT</button>
-                <button>AR</button>
+            <div class="lang-dropdown">
+                <button class="lang-btn" id="langBtnMobile">EN</button>
+                <div class="lang-menu" id="langMenuMobile">
+                    <button>EN</button>
+                    <button>IT</button>
+                    <button>AR</button>
+                </div>
             </div>
         </div>
-        <div class="side-contact">
-            <a href="mailto:youremail@example.com" class="contact-ite">
-                <i class="fa-solid fa-envelope"></i>
-                Email
-            </a>
-
-            <a href="tel:+201109458208" class="contact-ite">
-                <i class="fa-solid fa-phone"></i>
-                <span class="phone">Phone</span>
-            </a>
-
-            <a href="https://wa.me/201109458208" target="_blank" class="contact-ite">
-                <i class="fa-brands fa-whatsapp"></i>
-                <span class="phone">Whatsapp</span>
-            </a>
-        </div>
-    </div>
+    </nav>
     <!-- NAVBAR -->
 
 
@@ -137,7 +140,7 @@
 
     <!-- Our Mission -->
     <section class="mission" id="missionSection">
-        <img src="images/artichoke11.png"
+        <img loading="lazy" src="images/artichoke11.webp"
             alt="Land planted with Egyptian artichokes, ready for export by Ezz Export Company">
         <div class="mission-content">
             <h2 style="color: #198754;" data-lang="home-mission-h2">Our Mission</h2>
@@ -168,7 +171,7 @@
 
         <div class="journey-gallery">
             <div class="journey-item">
-                <img src="images/procss-1.png" alt="Harvesting">
+                <img loading="lazy" src="images/procss-1.webp" alt="Harvesting">
                 <div class="journey-overlay">
                     <h3 data-lang="home-journey-h3-1">Harvesting</h3>
                     <p data-lang="home-journey-p-1">Fresh crops are handpicked with care from premium Egyptian farms.
@@ -177,7 +180,7 @@
             </div>
 
             <div class="journey-item">
-                <img src="images/procss-2.jfif" alt="Sorting">
+                <img loading="lazy" src="images/procss-2.webp" alt="Sorting">
                 <div class="journey-overlay">
                     <h3 data-lang="home-journey-h3-2">Sorting, Cleaning</h3>
                     <p data-lang="home-journey-p-2">Products are sorted and cleaned for maximum purity and quality.</p>
@@ -185,7 +188,7 @@
             </div>
 
             <div class="journey-item">
-                <img src="images/procss-3.jfif" alt="Cold Storage">
+                <img loading="lazy" src="images/procss-3.webp" alt="Cold Storage">
                 <div class="journey-overlay">
                     <h3 data-lang="home-journey-h3-3">Cold Storage</h3>
                     <p data-lang="home-journey-p-3">Store in advanced refrigeration systems to maintain freshness and
@@ -195,7 +198,7 @@
             </div>
 
             <div class="journey-item">
-                <img src="images/procss-4.png" alt="Shipping">
+                <img loading="lazy" src="images/procss-4.webp" alt="Shipping">
                 <div class="journey-overlay">
                     <h3 data-lang="home-journey-h3-4">Global Shipping</h3>
                     <p data-lang="home-journey-p-4">Exported worldwide with full logistics support and safety assurance.
@@ -222,7 +225,7 @@
         <div class="footer-container">
             <!-- Logo -->
             <div class="footer-brand">
-                <a href="index.html"><img class="footer-logo" src="images/greenrow.png"
+                <a href="index.html"><img class="footer-logo" loading="lazy" src="images/greenrow.webp"
                         alt="Ezz Exports company strictly specializing in Agricultural Export"></a>
                 <p data-lang="footer-brand-p">
                     We export premium Egyptian vegetables worldwide with quality and trust.

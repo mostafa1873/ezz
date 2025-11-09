@@ -47,38 +47,42 @@ if (dropdownLink) {
 }
 
 
-//  SIDE MENU
-const menuIcon = document.getElementById("menuIcon");
-const sideMenu = document.getElementById("sideMenu");
-if (menuIcon && sideMenu) {
-    menuIcon.addEventListener("click", () => {
-        sideMenu.classList.toggle("active");
-    });
-
-    document.addEventListener("click", (e) => {
-        if (!sideMenu.contains(e.target) && !menuIcon.contains(e.target)) {
-            sideMenu.classList.remove("active");
-        }
-    });
-}
-
-
-//  LANGUAGE SIDE MENU
 const langBtnSide = document.getElementById("langBtnSide");
 const langMenuSide = document.getElementById("langMenuSide");
+const langBtnMobile = document.getElementById("langBtnMobile");
+const langMenuMobile = document.getElementById("langMenuMobile");
+const menuIcon = document.getElementById('menuIcon');
+const mobileDropdown = document.getElementById('mobileDropdown');
 
-if (langBtnSide && langMenuSide) {
-    langBtnSide.addEventListener("click", (e) => {
-        e.stopPropagation();
-        langMenuSide.classList.toggle("active");
-    });
+//mobile menu
 
-    document.addEventListener("click", (e) => {
-        if (!langMenuSide.contains(e.target) && !langBtnSide.contains(e.target)) {
-            langMenuSide.classList.remove("active");
-        }
-    });
-}
+menuIcon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menuIcon.classList.toggle('active');
+    mobileDropdown.classList.toggle('active');
+});
+
+document.addEventListener('click', (e) => {
+    if (!mobileDropdown.contains(e.target) && !menuIcon.contains(e.target)) {
+        mobileDropdown.classList.remove('active');
+        menuIcon.classList.remove('active');
+    }
+});
+
+// language dropdown
+
+langBtnMobile.addEventListener("click", (e) => {
+    e.stopPropagation();
+    langMenuMobile.classList.toggle("active");
+});
+
+//language dropdown
+
+document.addEventListener("click", (e) => {
+    if (!langMenuMobile.contains(e.target) && !langBtnMobile.contains(e.target)) {
+        langMenuMobile.classList.remove("active");
+    }
+});
 
 
 //  PRELOADER
@@ -107,6 +111,7 @@ function goToCategory(category) {
 
 
 //  MULTI LANGUAGE SYSTEM
+
 const supportedLangs = ["EN", "AR", "IT"];
 let currentLang = localStorage.getItem("lang") || "EN";
 
@@ -120,14 +125,15 @@ async function loadLanguage(lang) {
         document.body.style.textAlign = lang === "AR" ? "right" : "left";
 
         if (langBtn) langBtn.textContent = lang;
-        const sideBtn = document.getElementById("langBtnSide");
-        if (sideBtn) sideBtn.textContent = lang;
+        if (langBtnSide) langBtnSide.textContent = lang;
+        if (langBtnMobile) langBtnMobile.textContent = lang;
 
         localStorage.setItem("lang", lang);
         currentLang = lang;
 
         langMenu?.classList.remove("active");
         langMenuSide?.classList.remove("active");
+        langMenuMobile?.classList.remove("active");
 
         refreshProductsLanguage();
         refreshProductDetailsLanguage();
@@ -155,7 +161,7 @@ async function reapplyTranslations() {
 
 document.addEventListener("DOMContentLoaded", () => {
     loadLanguage(currentLang);
-    document.querySelectorAll("#langMenu button, #langMenuSide button").forEach(btn => {
+    document.querySelectorAll("#langMenu button, #langMenuSide button, #langMenuMobile button").forEach(btn => {
         btn.addEventListener("click", () => {
             const selectedLang = btn.textContent.trim().toUpperCase();
             if (supportedLangs.includes(selectedLang)) loadLanguage(selectedLang);
@@ -199,7 +205,6 @@ async function loadProducts() {
     const data = await response.json();
     const products = data.products;
 
-    // ✅ قراءة الفئة من الـ URL
     const params = new URLSearchParams(window.location.search);
     const selectedCategory = params.get("category");
 

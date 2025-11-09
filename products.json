@@ -101,24 +101,14 @@
       "description_it": "I broccoli surgelati di alta qualità, provenienti dalla fertile regione egiziana del Delta del Nilo, offrono freschezza e proprietà nutrizionali senza pari. Mantengono il loro colore vivace e il sapore intenso, rendendoli facili da aggiungere a qualsiasi piatto I nostri prodotti sono disponibili nelle seguenti varietà:",
       "variants": [
         {
-          "name_en": "Barile da 120/140 kg (2-3 cm)",
-          "name_ar": "برميل 140/120 كجم (2-3 سم)",
-          "name_it": "120/140 kg barrel (2-3 cm)"
-        },
-        {
-          "name_en": "Barile da 120/140 kg (3-5 cm)",
-          "name_ar": "برميل 140/120 كجم (3-5 سم)",
-          "name_it": "120/140 kg barrel (3-5 cm)"
-        },
-        {
-          "name_en": "Barile da 120/140 kg (5-7 cm)",
-          "name_ar": "برميل 140/120 كجم (5-7 سم)",
-          "name_it": "120/140 kg barrel (5-7 cm)"
-        },
-        {
           "name_en": "IQF 20-40 mm",
           "name_ar": "مم 40-20 IQF",
           "name_it": "IQF 20-40 mm"
+        },
+        {
+          "name_en": "IQF 30-50 mm",
+          "name_ar": "مم 50-30 IQF",
+          "name_it": "IQF 30-50 mm"
         },
         {
           "name_en": "IQF 40-60 mm",
@@ -141,26 +131,16 @@
       "description_ar": "استمتع بالنكهة الطازجة والفوائد الصحية لقرنبيط فاخر من دلتا النيل في مصر. يتميز صنفنا بحلاوته الطبيعية وملمسه الناعم، مما يجعله سهل الاستخدام في أطباق متنوعة توفر منتجاتنا بالأصناف التالية:",
       "description_en": "Enjoy the fresh flavor and health benefits of premium cauliflower from the Nile Delta in Egypt. Our frozen variety captures its natural sweetness and soft texture, making it easy to use in a variety of dishes our products are available in the following varieties:",
       "description_it": "Godetevi il sapore fresco e i benefici per la salute del cavolfiore di prima qualità proveniente dal Delta del Nilo in Egitto. La nostra varietà surgelata ne conserva la naturale dolcezza e la consistenza morbida, rendendolo facile da utilizzare in una varietà di piatti I nostri prodotti sono disponibili nelle seguenti varietà:",
-       "variants": [
-        {
-          "name_en": "Barile da 120/140 kg (2-3 cm)",
-          "name_ar": "برميل 140/120 كجم (2-3 سم)",
-          "name_it": "120/140 kg barrel (2-3 cm)"
-        },
-        {
-          "name_en": "Barile da 120/140 kg (3-5 cm)",
-          "name_ar": "برميل 140/120 كجم (3-5 سم)",
-          "name_it": "120/140 kg barrel (3-5 cm)"
-        },
-        {
-          "name_en": "Barile da 120/140 kg (5-7 cm)",
-          "name_ar": "برميل 140/120 كجم (5-7 سم)",
-          "name_it": "120/140 kg barrel (5-7 cm)"
-        },
+      "variants": [
         {
           "name_en": "IQF 20-40 mm",
           "name_ar": "مم 40-20 IQF",
           "name_it": "IQF 20-40 mm"
+        },
+        {
+          "name_en": "IQF 30-50 mm",
+          "name_ar": "مم 50-30 IQF",
+          "name_it": "IQF 30-50 mm"
         },
         {
           "name_en": "IQF 40-60 mm",
@@ -440,7 +420,7 @@
       "description_ar": "مزيج من الخضراوات الطازجة، غالبًا ما تُجمد لتوفير الوقت وزيادة القيمة الغذائية، مثل البازلاء والجزر والفاصوليا الخضراء والذرة، يُستخدم في العديد من الأطباق المصرية. وهو غني بالفيتامينات والمعادن والألياف. يمكن طهيه كطبق جانبي منفصل. يمكن إضافته إلى الحساء والأرز واليخنات واللحوم والدجاج. يمكن استخدامه في السلطات أو كطبق خضار سوتيه.",
       "description_en": "A mix of fresh vegetables, often frozen to save time and increase nutritional value, such as peas, carrots, green beans, and corn, is used in many Egyptian dishes. It is rich in vitamins, minerals, and fiber. It can be cooked as a separate side dish. It can be added to soups, rice, stews, meats, and chicken. It can be used in salads or as a sautéed vegetable dish.",
       "description_it": "Un mix di verdure fresche, spesso surgelate per risparmiare tempo e aumentare il valore nutrizionale, come piselli, carote, fagiolini e mais, viene utilizzato in molti piatti egiziani. È ricco di vitamine, minerali e fibre. Può essere cucinato come contorno a parte. Può essere aggiunto a zuppe, riso, stufati, carni e pollo. Può essere utilizzato nelle insalate o come piatto di verdure saltate.",
-       "variants": [
+      "variants": [
         {
           "name_en": "Mixed Vegetables (Green Peas, Carrots, and Green Beans)",
           "name_ar": "خضروات مشكلة (بازلاء، جزر، وفاصوليا خضراء)",
